@@ -11,3 +11,7 @@ numpy>=1.9.3
 matplotlib>=1.4.3
 scipy>=0.13.3
 scikit-learn>=0.17
+django-crispy-forms>=1.6
+requests>=2.10
+networkx>=1.11
+munkres>=1.0.7
