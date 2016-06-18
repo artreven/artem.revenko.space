@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
+        <title>{% block title %}{% endblock title %}</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script>
+        </script>
+        {% block more_js %}
+        {% endblock more_js %}
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}" />
+        {% block more_css %}
+        {% endblock more_css %}
+    </head>
+
+    <body>
+        <!--Navbar-->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--<a class="navbar-brand">-->
+                        <!--<img alt="AR" src="{% static 'logo.ico' %}">-->
+                    <!--</a>-->
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="">
+                    <ul class="nav navbar-nav">
+                        {% block left_menu_entries %}
+                        {% endblock %}
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        {% block right_menu_entries %}
+                        {% endblock %}
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <!--End navbar-->
+
+
+        <div class="container">
+            {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-dismissible {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                    {{ message.text }}
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div class="container">
+            {% block content %}
+            {% endblock content %}
+        </div>
+
+        <footer class="footer">
+            {% block footer %}
+                <p style="position: absolute; bottom: 0; text-align: center">2015-2016 by <a href="/">Artem Revenko</a></p>
+            {% endblock footer %}
+        </footer>
+    </body>
+</html>

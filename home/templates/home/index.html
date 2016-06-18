@@ -1,0 +1,34 @@
+{% extends "basepage.html" %}
+{% load staticfiles %}
+
+
+{% block title %} Artem Revenko {% endblock %}
+
+{% block left_menu_entries %}
+    <li><a href="{% url 'wsd:index' %}">WSD</a></li>
+    <li><a href="{% url 'sim_issues:index' %}">Similar Issues</a></li>
+{% endblock left_menu_entries %}
+
+{% block right_menu_entries %}
+    <li class="active"><a href="{% url 'home:index' %}">About</a></li>
+{% endblock right_menu_entries %}
+
+
+{% block content %}
+    <img src="{% static 'home/images/me.jpg' %}" alt="Artem Revenko" width="460" height="340" class="outstand">
+
+    <p class="outstand">
+        <a href="https://de.linkedin.com/in/artem-revenko-18318836">My LinkedIn page</a>
+
+        <a style="margin: 8px;" href="https://scholar.google.at/citations?user=fQtKwkQAAAAJ">My Google Scholar page</a>
+
+        <a href="http://cs.hse.ru/alumni/interview/revenko">Interview with me in russian</a>
+    </p>
+
+    <p class="outstand">I am proud to be a part of the
+        <a href="https://www.semantic-web.at/">
+            <img style="opacity: 0.8;" src="{% static 'wsd/images/swc_logo.gif' %}" alt="SWC logo" width="100" height="50">
+        </a>
+        team!
+    </p>
+{% endblock %}

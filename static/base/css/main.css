@@ -1,0 +1,115 @@
+/* links styling */
+a, a:hover {
+    color: MediumSeaGreen;
+}
+
+/* navbar styling */
+.navbar-nav > li:not(.active) > a:hover {
+    background-color: #111 !important;
+}
+
+.navbar-nav > .active > a {
+    background-color: MediumSeaGreen !important;
+}
+
+.btn-primary {
+    background:#333;
+}
+
+.btn-primary:hover, .btn-primary:focus{
+    background:#111;
+}
+
+/* Table styling */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+}
+
+/* Footer and header */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-top: 70px;
+  margin-bottom: 60px;
+  border: 0
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  height: 50px;
+  text-align: center;
+}
+.footer>p {
+  margin: 0;
+  width: 90%;
+}
+
+.navbar-right:last-child{margin-right:15px !important;}
+
+/* Text in jumbotron */
+.jumbotron p{
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+.jumbotron p:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  top: 50%;
+  left: -5px;
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: rgb(191, 88, 44);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+
+/****************************************/
+/*           Loading effect             */
+/****************************************/
+
+html {
+    -webkit-transition: background-color 0.25s;
+    transition: background-color 0.25s;
+}
+html.loading {
+    /* Replace #333 with the background-color of your choice */
+    /* Replace loading.gif with the loading image of your choice */
+    background: rgba(160, 160, 160, 0); /* url('loading.gif') no-repeat 50% 50%;*/
+
+    /* Ensures that the transition only runs in one direction */
+    -webkit-transition: background-color 0;
+    transition: background-color 0;
+}
+html, body {
+    /* For the loading indicator to be vertically centered ensure */
+    /* the html and body elements take up the full viewport */
+    min-height: 100%;
+}
+body {
+    -webkit-transition: opacity 0.25s ease-in;
+    transition: opacity 0.25s ease-in;
+}
+html.loading body {
+    /* Make the contents of the body opaque during loading*/
+    opacity: 0.5;
+
+    /* Ensures that the transition only runs in one direction */
+    -webkit-transition: opacity 0;
+    transition: opacity 0;
+}
