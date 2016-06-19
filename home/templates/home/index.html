@@ -5,8 +5,14 @@
 {% block title %} Artem Revenko {% endblock %}
 
 {% block left_menu_entries %}
-    <li><a href="{% url 'wsd:index' %}">WSD</a></li>
-    <li><a href="{% url 'sim_issues:index' %}">Similar Issues</a></li>
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Apps
+            <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="{% url 'wsd:index' %}">WSD</a></li>
+            <li><a href="{% url 'sim_issues:index' %}">Similar Issues</a></li>
+        </ul>
+    </li>
 {% endblock left_menu_entries %}
 
 {% block right_menu_entries %}
@@ -15,7 +21,7 @@
 
 
 {% block content %}
-    <img src="{% static 'home/images/me.jpg' %}" alt="Artem Revenko" width="460" height="340" class="outstand">
+    <img src="{% static 'home/images/me.jpg' %}" class="img-responsive img-rounded" alt="Artem Revenko" width="460" height="340" class="outstand">
 
     <p class="outstand">
         <a href="https://de.linkedin.com/in/artem-revenko-18318836">My LinkedIn page</a>
