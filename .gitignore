@@ -8,3 +8,4 @@ artem_revenko_space/settings/__init__.py
 static/admin
 static/wsd
 static/home
+settings_init/
