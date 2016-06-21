@@ -45,7 +45,8 @@ THIRD_PARTY_APPS = [
 USER_APPS = [
     'wsd_proximate_collocations.wsd_proximate_collocations',
     'home',
-    'sim_issues_app.sim_issues_app'
+    'sim_issues_app.sim_issues_app',
+    'text_assessment_app.text_assessment_app'
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + USER_APPS
