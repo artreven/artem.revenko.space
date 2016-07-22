@@ -39,7 +39,7 @@ LOGGING = {
             'propagate': True,
         },
         'django': {
-            'handlers': ['logfile'],
+            'handlers': ['logfile', 'mail_admins'],
             'level': 'INFO',
             'propagate': True,
         },
