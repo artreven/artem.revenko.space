@@ -31,9 +31,9 @@ urlpatterns = [
             'sim_issues_app.sim_issues_app.urls',
             namespace="sim_issues"
         )),
-    url(r'^text_assessment/',
-        include(
-            'text_assessment_app.text_assessment_app.urls',
-            namespace='text_assessment'
-        ))
+    # url(r'^text_assessment/',
+    #     include(
+    #         'text_assessment_app.text_assessment_app.urls',
+    #         namespace='text_assessment'
+    #     ))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
