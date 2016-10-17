@@ -1,6 +1,42 @@
+br {
+  content: " ";
+  display: block;
+  margin: 10px;
+}
+
+/* sortable table */
+
+table.sortable thead {
+    background-color:#eee;
+    color:#666666;
+    font-weight: bold;
+    cursor: default;
+}
+
+table.sortable tbody {
+    counter-reset: sortabletablescope;
+}
+table.sortable thead tr::before {
+    content: "";
+    display: table-cell;
+}
+table.sortable tbody tr::before {
+    content: counter(sortabletablescope);
+    counter-increment: sortabletablescope;
+    display: table-cell;
+}
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after {
+    content: " \25B4\25BE"
+}
+
 /* links styling */
 a, a:hover {
     color: MediumSeaGreen;
+}
+
+/* Highlighting */
+.highlight {
+    background-color: yellow;
 }
 
 /* navbar styling */
@@ -90,7 +126,7 @@ html {
 html.loading {
     /* Replace #333 with the background-color of your choice */
     /* Replace loading.gif with the loading image of your choice */
-    background: rgba(160, 160, 160, 0); /* url('loading.gif') no-repeat 50% 50%;*/
+    background: url('../images/200w.gif') no-repeat 50%; /*rgba(160, 160, 160, 0); */
 
     /* Ensures that the transition only runs in one direction */
     -webkit-transition: background-color 0;
@@ -107,9 +143,64 @@ body {
 }
 html.loading body {
     /* Make the contents of the body opaque during loading*/
-    opacity: 0.5;
+    opacity: 0.4;
 
     /* Ensures that the transition only runs in one direction */
     -webkit-transition: opacity 0;
     transition: opacity 0;
+}
+
+.bar1 {
+  -moz-transform:rotate(0deg) translate(0, -40px);
+  -webkit-transform:rotate(0deg) translate(0, -40px);opacity:0.12;
+}
+.bar2 {
+  -moz-transform:rotate(45deg) translate(0, -40px);
+  -webkit-transform:rotate(45deg) translate(0, -40px);opacity:0.25;
+}
+.bar3 {
+  -moz-transform:rotate(90deg) translate(0, -40px);
+  -webkit-transform:rotate(90deg) translate(0, -40px);opacity:0.37;
+}
+.bar4 {
+  -moz-transform:rotate(135deg) translate(0, -40px);
+  -webkit-transform:rotate(135deg) translate(0, -40px);opacity:0.50;
+}
+.bar5 {
+  -moz-transform:rotate(180deg) translate(0, -40px);
+  -webkit-transform:rotate(180deg) translate(0, -40px);opacity:0.62;
+}
+.bar6 {
+  -moz-transform:rotate(225deg) translate(0, -40px);
+  -webkit-transform:rotate(225deg) translate(0, -40px);opacity:0.75;
+}
+.bar7 {
+  -moz-transform:rotate(270deg) translate(0, -40px);
+  -webkit-transform:rotate(270deg) translate(0, -40px);opacity:0.87;
+}
+.bar8 {
+  -moz-transform:rotate(315deg) translate(0, -40px);
+  -webkit-transform:rotate(315deg) translate(0, -40px);opacity:1;
+}
+#loader {
+  position:absolute;
+  top:300px;
+  left:50%;
+  z-index:9999;
+  width:100px;
+  height:100px;
+  margin-bottom:1.5em;
+  margin-right:1.5em;
+  -moz-border-radius:100px;
+  float:left;
+  -moz-transform:scale(0.5);
+  -webkit-transform:scale(0.5);
+}
+#loader div {
+  width:10px;
+  height:30px;
+  background:#000;
+  position:absolute;
+  top:35px;
+  left:45px;
 }
