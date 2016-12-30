@@ -26,11 +26,6 @@ urlpatterns = [
             'wsd_proximate_collocations.wsd_proximate_collocations.urls',
             namespace="wsd"
         )),
-    url(r'^sim_issues/',
-        include(
-            'sim_issues_app.sim_issues_app.urls',
-            namespace="sim_issues"
-        )),
     url(r'^frequent_terms/',
         include(
             'frequent_ngramms.frequent_ngramms.urls',
