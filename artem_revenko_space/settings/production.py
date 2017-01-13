@@ -53,5 +53,10 @@ LOGGING = {
             'level': 'INFO',
             'propagate': True,
         },
+        'frequent_terms': {
+            'handlers': ['logfile'],
+            'level': 'INFO',
+            'formatter': 'verbose'
+        }
     }
 }
