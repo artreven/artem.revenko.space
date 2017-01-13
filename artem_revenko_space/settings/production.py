@@ -37,7 +37,8 @@ LOGGING = {
         },
         'logfile': {
             'class': 'logging.handlers.WatchedFileHandler',
-            'filename': '/var/log/django/artem.revenko.space.error.log'
+            'filename': '/var/log/django/artem.revenko.space.error.log',
+            'level': 'INFO',
         },
     },
     'loggers': {
