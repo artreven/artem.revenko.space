@@ -21,6 +21,14 @@ LOGGING = {
             '()': 'django.utils.log.RequireDebugFalse'
         }
     },
+    'formatters': {
+        'verbose': {
+            'format': '\n\n%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
     'handlers': {
         'mail_admins': {
             'level': 'ERROR',
@@ -37,6 +45,7 @@ LOGGING = {
             'handlers': ['logfile'],
             'level': 'INFO',
             'propagate': True,
+            'formatter': 'verbose'
         },
         'django': {
             'handlers': ['logfile', 'mail_admins'],
