@@ -31,4 +31,9 @@ urlpatterns = [
             'frequent_ngramms.frequent_ngramms.urls',
             namespace="frequent_ngramms"
         )),
+    # url(r'^similar_issues/',
+    #     include(
+    #         'sim_issues_app.sim_issues_app.urls',
+    #         namespace="sim_issues"
+    #     )),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
