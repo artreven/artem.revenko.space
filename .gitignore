@@ -1,4 +1,4 @@
-wsd_proximate_collocations/
+apps/wsd_proximate_collocations/
 .idea/
 */migrations/
 __pycache__
@@ -9,5 +9,5 @@ static/admin
 static/wsd
 static/home
 settings_init/
-text_assessment_app/
+apps/text_assessment_app/
 frequent_ngramms/

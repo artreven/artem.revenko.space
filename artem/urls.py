@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^', include('home.urls', namespace='home')),
     url(r'^wsd/',
         include(
-            'wsd_proximate_collocations.wsd_proximate_collocations.urls',
+            'apps.wsd_proximate_collocations.wsd_proximate_collocations.urls',
             namespace="wsd"
         )),
     url(r'^frequent_terms/',
@@ -38,7 +38,7 @@ urlpatterns = [
     #     )),
     url(r'^text_assessment/',
         include(
-            'text_assessment_app.text_assessment_app.urls',
+            'apps.text_assessment_app.text_assessment_app.urls',
             namespace="text_assessment"
         )),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
