@@ -3,7 +3,7 @@ wsd_proximate_collocations/
 */migrations/
 __pycache__
 sim_issues_app/
-artem_revenko_space/settings/__init__.py
+artem/settings/__init__.py
 *~
 static/admin
 static/wsd
