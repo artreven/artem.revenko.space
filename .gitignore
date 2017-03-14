@@ -3,7 +3,7 @@ apps/wsd_proximate_collocations/
 */migrations/
 __pycache__
 sim_issues_app/
-artem/settings/__init__.py
+artem/settings/__init__
 *~
 static/admin
 static/wsd
