@@ -1,13 +1,12 @@
-apps/wsd_proximate_collocations/
+apps/*
 .idea/
 */migrations/
 __pycache__
 sim_issues_app/
-artem/settings/__init__
+artem/settings/__init__*
 *~
 static/admin
 static/wsd
 static/home
 settings_init/
-apps/text_assessment_app/
 frequent_ngramms/

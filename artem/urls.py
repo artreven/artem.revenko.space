@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^', include('home.urls', namespace='home')),
     url(r'^wsd/',
         include(
-            'apps.wsd_proximate_collocations.wsd_proximate_collocations.urls',
+            'apps.django-wsd.django-wsd.urls',
             namespace="wsd"
         )),
     url(r'^frequent_terms/',
@@ -38,7 +38,7 @@ urlpatterns = [
     #     )),
     url(r'^text_assessment/',
         include(
-            'apps.text_assessment_app.text_assessment_app.urls',
+            'apps.django-text-assessment.django-text-assessment.urls',
             namespace="text_assessment"
         )),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
