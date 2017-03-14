@@ -9,4 +9,4 @@ static/admin
 static/wsd
 static/home
 settings_init/
-frequent_ngramms/
+apps/django-frequent-ngramms/

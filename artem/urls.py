@@ -28,7 +28,7 @@ urlpatterns = [
         )),
     url(r'^frequent_terms/',
         include(
-            'frequent_ngramms.frequent_ngramms.urls',
+            'apps.django-frequent-ngramms.django-frequent-ngramms.urls',
             namespace="frequent_ngramms"
         )),
     # url(r'^similar_issues/',

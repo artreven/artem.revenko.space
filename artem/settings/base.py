@@ -44,7 +44,7 @@ USER_APPS = [
     'apps.django-wsd.django-wsd',
     'home',
     # 'sim_issues_app.sim_issues_app',
-    'frequent_ngramms.frequent_ngramms',
+    'apps.django-frequent-ngramms.django-frequent-ngramms',
     'apps.django-text-assessment.django-text-assessment'
 ]
 
