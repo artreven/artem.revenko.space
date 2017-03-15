@@ -5,8 +5,7 @@ __pycache__
 sim_issues_app/
 artem/settings/__init__*
 *~
-static/admin
-static/wsd
-static/home
+static/*
+!static/base
 settings_init/
 apps/django-frequent-ngramms/
