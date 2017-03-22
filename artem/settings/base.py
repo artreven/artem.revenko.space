@@ -149,6 +149,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # ##### SECURITY CONFIGURATION ############################
 ADMINS = (
-    ('Artem Revenko', 'artem.revenko@semantic-web.com'),
+    ('Artem Revenko', 'artem@revenko.space'),
 )
 MANAGERS = ADMINS
