@@ -4,7 +4,7 @@ from .base import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['artem.semantic-web.at', 'artem']
+ALLOWED_HOSTS = ['artem.revenko.space']
 
 # CSRF_COOKIE_SECURE = True
 # SESSION_COOKIE_SECURE = True

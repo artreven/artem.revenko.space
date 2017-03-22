@@ -21,24 +21,4 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('home.urls', namespace='home')),
-    url(r'^wsd/',
-        include(
-            'django-wsd.wsd.urls',
-            namespace="wsd"
-        )),
-    url(r'^frequent_terms/',
-        include(
-            'django-frequent-ngramms.frequentngramms.urls',
-            namespace="frequent_ngramms"
-        )),
-    url(r'^text_assessment/',
-        include(
-            'django-text-assessment.textassessment.urls',
-            namespace="text_assessment"
-        )),
-    # url(r'^thesaurus_harmony/',
-    #     include(
-    #         'django-thesaurus-harmony.thesaurusharmony.urls',
-    #         namespace="thesaurus_harmony"
-    #     )),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
