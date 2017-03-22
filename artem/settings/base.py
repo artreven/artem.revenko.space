@@ -42,11 +42,12 @@ THIRD_PARTY_APPS = [
 ]
 
 USER_APPS = [
-    'apps.django-wsd.django-wsd',
     'home',
-    # 'sim_issues_app.sim_issues_app',
-    'apps.django-frequent-ngramms.django-frequent-ngramms',
-    'apps.django-text-assessment.django-text-assessment'
+    'wsd',
+    'frequentngramms', #'.apps.FrequentNgrammsConfig',
+    'textassessment',
+    'thesaurusharmony'
+    # 'django-thesaurus-harmony.thesaurusharmony.apps.DjangoThesaurusHarmonyConfig',
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + USER_APPS
@@ -96,9 +97,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': '',
         'USER': '',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        # 'PASSWORD': '',
+        # 'HOST': '127.0.0.1',
+        # 'PORT': '5432',
     }
 }
 

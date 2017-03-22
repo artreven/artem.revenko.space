@@ -23,22 +23,22 @@ urlpatterns = [
     url(r'^', include('home.urls', namespace='home')),
     url(r'^wsd/',
         include(
-            'apps.django-wsd.django-wsd.urls',
+            'wsd.urls',
             namespace="wsd"
         )),
     url(r'^frequent_terms/',
         include(
-            'apps.django-frequent-ngramms.django-frequent-ngramms.urls',
+            'frequentngramms.urls',
             namespace="frequent_ngramms"
         )),
-    # url(r'^similar_issues/',
-    #     include(
-    #         'sim_issues_app.sim_issues_app.urls',
-    #         namespace="sim_issues"
-    #     )),
     url(r'^text_assessment/',
         include(
-            'apps.django-text-assessment.django-text-assessment.urls',
+            'textassessment.urls',
             namespace="text_assessment"
+        )),
+    url(r'^thesaurus_harmony/',
+        include(
+            'thesaurusharmony.urls',
+            namespace="thesaurus_harmony"
         )),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -4,7 +4,7 @@ from .dev import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['artem.semantic-web.at']
+ALLOWED_HOSTS = ['artem.semantic-web.at', 'artem']
 
 # CSRF_COOKIE_SECURE = True
 # SESSION_COOKIE_SECURE = True
