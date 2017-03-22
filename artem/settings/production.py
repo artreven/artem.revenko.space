@@ -1,5 +1,5 @@
 # for now fetch the development settings only
-from .dev import *
+from .base import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
