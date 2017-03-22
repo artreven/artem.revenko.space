@@ -45,7 +45,7 @@ USER_APPS = [
     'django-wsd.wsd',
     'django-frequent-ngramms.frequentngramms', #'.apps.FrequentNgrammsConfig',
     'django-text-assessment.textassessment',
-    'django-thesaurus-harmony.thesaurusharmony',
+    # 'django-thesaurus-harmony.thesaurusharmony',
     # 'django-thesaurus-harmony.thesaurusharmony.apps.DjangoThesaurusHarmonyConfig',
     'home',
 ]

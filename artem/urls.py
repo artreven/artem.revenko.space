@@ -36,9 +36,9 @@ urlpatterns = [
             'django-text-assessment.textassessment.urls',
             namespace="text_assessment"
         )),
-    url(r'^thesaurus_harmony/',
-        include(
-            'django-thesaurus-harmony.thesaurusharmony.urls',
-            namespace="thesaurus_harmony"
-        )),
+    # url(r'^thesaurus_harmony/',
+    #     include(
+    #         'django-thesaurus-harmony.thesaurusharmony.urls',
+    #         namespace="thesaurus_harmony"
+    #     )),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
